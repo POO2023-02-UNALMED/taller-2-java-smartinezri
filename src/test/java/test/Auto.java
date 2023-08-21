@@ -21,16 +21,19 @@ public class Auto{
 	}
 	
 	String verificarIntegridad() {
-		String integridad = null;
+		boolean original = true;
 		for (int i = 0; i < asientos.length; i++) {
-			if (asientos[i].registro == Auto.registro && Auto.registro == motor.registro) {
-				integridad = "Auto original";
-			}
-			else {
-				integridad = "Las piezas no son originales";
+			if (asientos[i].registro != Auto.registro || asientos[i].registro != motor.registro) {
+				original = false;
+				break;
 			}
 		}
-		return integridad;
+		if (original == true) {
+			return "Auto original";
+		}
+		else {
+			return "Las piezas no son originales";
+		}
 	}
 	
 }
