@@ -27,11 +27,10 @@ public class Auto{
 				original = false;
 				break;
 			}
+		}
 			
 		if (registro != motor.registro) {
 			original = false;
-			break;
-		}
 		}
 		if (original == true) {
 			return "Auto original";
