@@ -7,7 +7,7 @@ public class Auto{
 	Asiento[] asientos;
 	String marca;
 	Motor motor;
-	int registro;
+	static int registro;
 	public static int cantidadCreados;
 	
 	int cantidadAsientos() {
@@ -23,12 +23,13 @@ public class Auto{
 	String verificarIntegridad() {
 		boolean original = true;
 		for (Asiento a : asientos) {
-			if (a.registro == registro && a.registro == motor.registro && registro == motor.registro) {
-				original = true;
-			}
-			else {
+			if (a.registro != Auto.registro) {
 				original = false;
 			}
+			
+		if (Auto.registro != motor.registro) {
+			original = false;
+		}
 		}
 		if (original == true) {
 			return "Auto original";
