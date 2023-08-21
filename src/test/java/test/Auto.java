@@ -25,10 +25,12 @@ public class Auto{
 		for (Asiento a : asientos) {
 			if (a.registro != registro) {
 				original = false;
+				break;
 			}
 			
 		if (registro != motor.registro) {
 			original = false;
+			break;
 		}
 		}
 		if (original == true) {
