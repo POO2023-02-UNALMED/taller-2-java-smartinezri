@@ -12,20 +12,25 @@ public class Auto{
 	
 	int cantidadAsientos() {
 		int cantidad = 0;
-		for (int i = 0; i <= asientos.length; i++) {
-			cantidad += 1;
+		for (int i = 0; i < asientos.length; i++) {
+			if (asientos[i] == new Asiento()) {
+				cantidad += 1;
+			}
 		}
 		return cantidad;
 	}
 	
-	void verificarIntegridad() {
-		if (Asiento.registro == Auto.registro && Auto.registro == motor.registro) {
-			System.out.println("Auto original");
+	/*String verificarIntegridad() {
+		String integridad = null;
+		for (int i = 0; i < asientos.length; i++) {
+			if (asientos[i].registro == Auto.registro && Auto.registro == motor.registro) {
+				integridad = "Auto original";
+			}
+			else {
+				integridad = "Las piezas no son originales";
+			}
 		}
-		else {
-			System.out.println("Las piezas no son originales");
-		}
-		
-	}
+		return integridad;
+	}*/
 	
 }
