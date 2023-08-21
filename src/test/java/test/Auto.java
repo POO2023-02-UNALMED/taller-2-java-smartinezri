@@ -23,13 +23,13 @@ public class Auto{
 	String verificarIntegridad() {
 		boolean original = true;
 		for (Asiento a : asientos) {
-			if (a.registro != registro) {
+			if (a != null && a.registro != registro) {
 				original = false;
 				break;
 			}
 		}
 			
-		if (registro != motor.registro) {
+		if (registro != motor.registro && motor != null) {
 			original = false;
 		}
 		if (original == true) {
