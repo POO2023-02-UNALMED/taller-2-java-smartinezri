@@ -20,7 +20,7 @@ public class Auto{
 		return cantidad;
 	}
 	
-	/*String verificarIntegridad() {
+	String verificarIntegridad() {
 		String integridad = null;
 		for (int i = 0; i < asientos.length; i++) {
 			if (asientos[i].registro == Auto.registro && Auto.registro == motor.registro) {
@@ -31,6 +31,6 @@ public class Auto{
 			}
 		}
 		return integridad;
-	}*/
+	}
 	
 }
