@@ -22,8 +22,8 @@ public class Auto{
 	
 	String verificarIntegridad() {
 		boolean original = true;
-		for (int i = 0; i < asientos.length; i++) {
-			if (asientos[i].registro != registro || asientos[i].registro != motor.registro) {
+		for (Asiento a : asientos) {
+			if (a.registro != registro || a.registro != motor.registro) {
 				original = false;
 				break;
 			}
