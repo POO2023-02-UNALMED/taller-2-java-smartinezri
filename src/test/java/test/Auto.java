@@ -8,7 +8,7 @@ public class Auto{
 	String marca;
 	Motor motor;
 	static int registro;
-	static int cantidadCreados;
+	public static int cantidadCreados;
 	
 	int cantidadAsientos() {
 		int cantidad = 0;
@@ -18,15 +18,14 @@ public class Auto{
 		return cantidad;
 	}
 	
-	String verificarIntegridad() {
-		String integridad;
+	void verificarIntegridad() {
 		if (Asiento.registro == Auto.registro && Auto.registro == motor.registro) {
-			integridad = "Auto original";
+			System.out.println("Auto original");
 		}
 		else {
-			integridad = "Las piezas no son originales";
+			System.out.println("Las piezas no son originales");
 		}
-		return integridad;
+		
 	}
 	
 }
