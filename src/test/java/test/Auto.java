@@ -13,7 +13,7 @@ public class Auto{
 	int cantidadAsientos() {
 		int cantidad = 0;
 		for (int i = 0; i < asientos.length; i++) {
-			if (asientos[i] == new Asiento()) {
+			if (asientos[i] != null) {
 				cantidad += 1;
 			}
 		}
@@ -23,7 +23,7 @@ public class Auto{
 	String verificarIntegridad() {
 		boolean original = true;
 		for (int i = 0; i < asientos.length; i++) {
-			if (asientos[i].registro != Auto.registro || asientos[i].registro != motor.registro) {
+			if (asientos[i].registro != registro || asientos[i].registro != motor.registro) {
 				original = false;
 				break;
 			}
